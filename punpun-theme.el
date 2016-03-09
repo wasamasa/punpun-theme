@@ -14,7 +14,7 @@
   "Toggle between dark and light version of punpun-theme."
   (interactive)
   (setq punpun-dark-p (not punpun-dark-p))
-  (load-theme 'punpun-theme t))
+  (load-theme 'punpun t))
 
 (defvar punpun-colors
   '((base0  ("#eeeeee" "#080808") ("color-255" "color-232"))
