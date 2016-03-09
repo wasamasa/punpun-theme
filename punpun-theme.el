@@ -47,8 +47,8 @@
 (defun punpun-transform-face (face)
   (let* ((name (car face))
          (spec (cdr face))
-         (graphic-spec (punpun-transform-spec spec 'graphic))
-         (tty-spec (punpun-transform-spec spec 'tty)))
+         (graphic-spec (punpun-transform-spec spec t))
+         (tty-spec (punpun-transform-spec spec nil)))
     `(,name ((((type graphic)) ,@graphic-spec)
              (((type tty)) ,@tty-spec)))))
 
