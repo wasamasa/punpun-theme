@@ -1,6 +1,8 @@
 punpun-theme
 ============
 
+.. image:: https://raw.github.com/wasamasa/punpun-theme/master/img/banner.png
+
 About
 -----
 
