@@ -12,7 +12,8 @@ creating a light theme.
 Screenshots
 -----------
 
-.. image:: https://raw.github.com/wasamasa/punpun-theme/master/img/scrot.png
+.. image:: https://raw.github.com/wasamasa/punpun-theme/master/img/light.png
+.. image:: https://raw.github.com/wasamasa/punpun-theme/master/img/dark.png
 
 Design ideas
 ------------
