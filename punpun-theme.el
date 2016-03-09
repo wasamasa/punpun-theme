@@ -1,8 +1,17 @@
+(defgroup punpun nil
+  "A bleak theme"
+  :group 'themes
+  :prefix "punpun-")
+
 (deftheme punpun "A bleak theme")
 
-(defvar punpun-dark-p nil)
+(defcustom punpun-dark-p nil
+  "Use the dark version of the theme?"
+  :type '(boolean (const :tag "Light" nil)
+                  (const :tag "Dark" t)))
 
 (defun punpun-toggle ()
+  "Toggle between dark and light version of punpun-theme."
   (interactive)
   (setq punpun-dark-p (not punpun-dark-p))
   (load-theme 'punpun-theme t))
