@@ -15,6 +15,19 @@ Screenshots
 .. image:: https://raw.github.com/wasamasa/punpun-theme/master/img/light.png
 .. image:: https://raw.github.com/wasamasa/punpun-theme/master/img/dark.png
 
+Usage
+-----
+
+Either load the theme interactively with ``M-x load-theme RET punpun
+RET`` or in your init file with:
+
+.. code:: elisp
+
+    (load-theme 'punpun t)
+
+If you prefer the dark variant, customize ``punpun-dark-p``.
+Alternatively, toggle between both variants with ``M-x punpun-toggle``.
+
 Design ideas
 ------------
 
