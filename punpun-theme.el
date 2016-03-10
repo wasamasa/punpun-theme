@@ -103,7 +103,8 @@
     output))
 
 (punpun-set-faces
- '((default :foreground base5 :background base0)
+ '(;; faces.el
+   (default :foreground base5 :background base0)
    (cursor :background base4)
    (region :foreground unspecified :background base2)
    (fringe :foreground base7 :background base1)
@@ -114,6 +115,7 @@
    (highlight :background base1)
    (secondary-selection :background base1)
    (trailing-whitespace :background red)
+   (escape-glyph :foreground green :weight bold)
 
    (mode-line :foreground base5 :background base1)
    (mode-line-inactive :foreground base3 :background base1)
@@ -124,7 +126,14 @@
    (window-divider :inherit vertical-border)
    (minibuffer-prompt :inherit font-lock-comment-face)
 
-   (escape-glyph :foreground green :weight bold)
+   (error :foreground red)
+   (success :foreground green)
+   (warning :foreground orange :weight bold)
+
+   (show-paren-match :weight bold)
+   (show-paren-mismatch :foreground red :weight bold)
+
+   ;; font-lock.el
    (font-lock-builtin-face :foreground base4 :weight bold)
    (font-lock-comment-face :foreground base4)
    (font-lock-constant-face :slant italic)
@@ -137,13 +146,6 @@
    (font-lock-type-face :slant italic)
    (font-lock-variable-name-face :slant italic)
    (font-lock-warning-face :foreground orange :weight bold)
-
-   (error :foreground red)
-   (success :foreground green)
-   (warning :foreground orange :weight bold)
-
-   (show-paren-match :weight bold)
-   (show-paren-mismatch :foreground red :weight bold)
 
    ))
 
