@@ -108,6 +108,22 @@
    (region :foreground unspecified :background base2)
    (fringe :foreground base7 :background base1)
    (vertical-border :foreground base6)
+   (shadow :inherit font-lock-comment-face)
+   (link :slant italic :underline t)
+   (link-visited :inherit link :foreground base4)
+   (highlight :background base1)
+   (secondary-selection :background base1)
+   (trailing-whitespace :background red)
+
+   (mode-line :foreground base5 :background base1)
+   (mode-line-inactive :foreground base3 :background base1)
+   (mode-line-highlight :slant italic)
+   (mode-line-highlight :box (:line-width -1))
+   (header-line :inherit mode-line)
+   (vertical-border :foreground base4)
+   (window-divider :inherit vertical-border)
+   (minibuffer-prompt :inherit font-lock-comment-face)
+
    (escape-glyph :foreground green :weight bold)
    (font-lock-builtin-face :foreground base4 :weight bold)
    (font-lock-comment-face :foreground base4)
@@ -126,8 +142,8 @@
    (success :foreground green)
    (warning :foreground orange :weight bold)
 
-   (mode-line :foreground base5 :background base1)
-   (mode-line-inactive :foreground base3 :background base1)
+   (show-paren-match :weight bold)
+   (show-paren-mismatch :foreground red :weight bold)
 
    ))
 
