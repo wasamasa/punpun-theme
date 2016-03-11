@@ -147,6 +147,59 @@
    (font-lock-variable-name-face :slant italic)
    (font-lock-warning-face :foreground orange :weight bold)
 
+   ;; linum.el
+   (linum :inherit shadow :background base1)
+
+   ;; isearch.el
+   (isearch :background base2)
+   (isearch-fail :inherit error)
+   (lazy-highlight :background base1)
+
+   ;; tooltip.el
+   (tooltip :inherit default :background base0)
+
+   ;; which-func.el
+   (which-func :slant italic)
+
+   ;; eww.el
+   (eww-form-submit :foreground base6 :background base1 :box (:line-width -1))
+   (eww-form-checkbox :inherit eww-form-submit)
+   (eww-form-select :inherit eww-form-submit)
+   (eww-form-text :background base1)
+   (eww-form-textarea :inherit eww-form-text)
+
+   ;; ido.el
+   (ido-only-match :weight bold)
+   (ido-subdir :inherit font-lock-string-face)
+
+   ;; cua-base.el
+   (cua-rectangle :inherit region)
+
+   ;; make-mode.el
+   (makefile-space :background red)
+
+   ;; pulse.el
+   (pulse-highlight-start-face :background yellow)
+
+   ;; replace.el
+   (match :background yellow)
+
+   ;; flymake
+   (flymake-errline :underline (:style wave :color red))
+   (flymake-warnline :underline (:style wave :color orange))
+
+   ;; flyspell
+   (flyspell-duplicate :underline (:style wave :color orange))
+   (flyspell-incorrect :underline (:style wave :color red))
+
+   ;; sh-script.el
+   (sh-heredoc :inherit font-lock-string-face)
+   (sh-quoted-exec :slant italic)
+
+   ;; gdb-mi.el
+   (breakpoint-enabled :foreground red)
+   (breakpoint-enabled :inherit font-lock-comment-face)
+
    ))
 
 ;;;###autoload
