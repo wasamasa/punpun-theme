@@ -27,15 +27,14 @@ Not on the usual places yet.  Install it manually for the time being.
 Usage
 -----
 
-Either load the theme interactively with ``M-x load-theme RET punpun
-RET`` or in your init file with:
+Either load the theme interactively with ``M-x load-theme RET
+punpun-light RET`` or in your init file with:
 
 .. code:: elisp
 
-    (load-theme 'punpun t)
+    (load-theme 'punpun-light t)
 
-If you prefer the dark variant, customize ``punpun-dark-p``.
-Alternatively, toggle between both variants with ``M-x punpun-toggle``.
+Replace ``punpun-light`` with ``punpun-dark`` for the dark version.
 
 Contributing
 ------------
