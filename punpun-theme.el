@@ -4,7 +4,6 @@
 
 ;; Author: Vasilij Schneidermann <v.schneidermann@gmail.com>
 ;; URL: https://github.com/wasamasa/punpun-theme
-;; Version: 0.0.1
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -30,24 +29,6 @@
 
 ;;; Code:
 
-(defgroup punpun nil
-  "A bleak theme"
-  :group 'themes
-  :prefix "punpun-")
-
-(deftheme punpun "A bleak theme")
-
-(defcustom punpun-dark-p nil
-  "Use the dark version of the theme?"
-  :type '(boolean (const :tag "Light" nil)
-                  (const :tag "Dark" t)))
-
-(defun punpun-toggle ()
-  "Toggle between dark and light version of punpun-theme."
-  (interactive)
-  (setq punpun-dark-p (not punpun-dark-p))
-  (load-theme 'punpun t))
-
 (defvar punpun-colors
   '((base0  ("#eeeeee" "#080808") ("color-255" "color-232"))
     (base1  ("#d0d0d0" "#1c1c1c") ("color-252" "color-234"))
@@ -67,42 +48,7 @@
     (pink   ("#ff005f" "#ff0087") ("color-197" "color-198"))
     (violet ("#8700d7" "#af00d7") ("color-92"  "color-128"))))
 
-(defun punpun-color (shade display)
-  (nth (if punpun-dark-p 1 0)
-       (nth (if display 1 2)
-            (assoc shade punpun-colors))))
-
-(defun punpun-set-faces (faces)
-  (apply #'custom-theme-set-faces 'punpun
-         (mapcar #'punpun-transform-face faces)))
-
-(defun punpun-transform-face (face)
-  (let* ((name (car face))
-         (spec (cdr face))
-         (graphic-spec (punpun-transform-spec spec t))
-         (tty-spec (punpun-transform-spec spec nil)))
-    `(,name ((((type graphic)) ,@graphic-spec)
-             (((type tty)) ,@tty-spec)))))
-
-(defun punpun-transform-spec (spec display)
-  (let (output)
-    (while spec
-      (let* ((key (car spec))
-             (value (cadr spec))
-             (color (punpun-color value display)))
-        (cond
-         ((and (memq key '(:box :underline)) (listp value))
-          (setq output (append output
-                               (list key (punpun-transform-spec value display)))))
-         ((and (not (memq value '(t unspecified)))
-               (memq key '(:foreground :background :underline :overline :strike-through :color))
-               color)
-          (setq output (append output (list key color))))
-         (t (setq output (append output (list key value))))))
-      (setq spec (cddr spec)))
-    output))
-
-(punpun-set-faces
+(defvar punpun-faces
  '(;; faces.el
    (default :foreground base5 :background base0)
    (cursor :background base4)
@@ -202,6 +148,42 @@
 
    ))
 
+(defun punpun-set-faces (theme darkp)
+  (apply #'custom-theme-set-faces theme
+         (mapcar (lambda (face) (punpun-transform-face face darkp))
+                 punpun-faces)))
+
+(defun punpun-transform-face (face darkp)
+  (let* ((name (car face))
+         (spec (cdr face))
+         (graphic-spec (punpun-transform-spec spec t darkp))
+         (tty-spec (punpun-transform-spec spec nil darkp)))
+    `(,name ((((type graphic)) ,@graphic-spec)
+             (((type tty)) ,@tty-spec)))))
+
+(defun punpun-transform-spec (spec display darkp)
+  (let (output)
+    (while spec
+      (let* ((key (car spec))
+             (value (cadr spec))
+             (color (punpun-color value display darkp)))
+        (cond
+         ((and (memq key '(:box :underline)) (listp value))
+          (setq output (append output
+                               (list key (punpun-transform-spec value display darkp)))))
+         ((and (not (memq value '(t unspecified)))
+               (memq key '(:foreground :background :underline :overline :strike-through :color))
+               color)
+          (setq output (append output (list key color))))
+         (t (setq output (append output (list key value))))))
+      (setq spec (cddr spec)))
+    output))
+
+(defun punpun-color (shade display darkp)
+  (nth (if darkp 1 0)
+       (nth (if display 1 2)
+            (assoc shade punpun-colors))))
+
 ;;;###autoload
 (and load-file-name
      (boundp 'custom-theme-load-path)
@@ -209,6 +191,6 @@
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
 
-(provide-theme 'punpun)
+(provide 'punpun-theme)
 
 ;;; punpun-theme.el ends here
