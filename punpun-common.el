@@ -1,4 +1,4 @@
-;;; punpun-theme.el --- A bleak theme.
+;;; punpun-common.el --- A bleak theme.
 
 ;; Copyright (C) 2016 Vasilij Schneidermann <v.schneidermann@gmail.com>
 
@@ -92,6 +92,10 @@
    (font-lock-type-face :slant italic)
    (font-lock-variable-name-face :slant italic)
    (font-lock-warning-face :foreground orange :weight bold)
+
+   ;; compile.el
+   (compilation-mode-line-fail :inherit error :weight bold)
+   (compilation-mode-line-exit :inherit success :weight bold)
 
    ;; linum.el
    (linum :inherit shadow :background base1)
@@ -191,6 +195,6 @@
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
 
-(provide 'punpun-theme)
+(provide 'punpun-common)
 
-;;; punpun-theme.el ends here
+;;; punpun-common.el ends here

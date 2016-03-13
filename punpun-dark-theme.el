@@ -1,4 +1,4 @@
-(require 'punpun-theme)
+(require 'punpun-common)
 
 (deftheme punpun-dark "A bleak theme (dark version)")
 

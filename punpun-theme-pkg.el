@@ -1,1 +1,1 @@
-(define-package "punpun" "0.0.1" "A bleak theme")
+(define-package "punpun-theme" "0.0.1" "A bleak theme")
