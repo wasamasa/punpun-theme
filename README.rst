@@ -22,7 +22,9 @@ Screenshots
 Installation
 ------------
 
-Not on the usual places yet.  Install it manually for the time being.
+Set up the `Marmalade <https://marmalade-repo.org/>`_ or `MELPA
+(stable) <http://melpa.org/>`_ repository if you haven't already and
+install with ``M-x package-install RET punpun-theme RET``.
 
 Usage
 -----
