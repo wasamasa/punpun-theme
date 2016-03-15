@@ -49,7 +49,30 @@
     (violet ("#8700d7" "#af00d7") ("color-92"  "color-128"))))
 
 (defvar punpun-faces
- '(;; faces.el
+ '(;; compile.el
+   (compilation-mode-line-fail :inherit error :weight bold)
+   (compilation-mode-line-exit :inherit success :weight bold)
+
+   ;; cua-base.el
+   (cua-rectangle :inherit region)
+
+   ;; eww.el
+   (eww-form-submit :foreground base6 :background base1 :box (:line-width -1))
+   (eww-form-checkbox :inherit eww-form-submit)
+   (eww-form-select :inherit eww-form-submit)
+   (eww-form-text :background base1)
+   (eww-form-textarea :inherit eww-form-text)
+
+   ;; ido.el
+   (ido-only-match :weight bold)
+   (ido-subdir :inherit font-lock-string-face)
+
+   ;; isearch.el
+   (isearch :background base2)
+   (isearch-fail :inherit error)
+   (lazy-highlight :background base1)
+
+   ;; faces.el
    (default :foreground base5 :background base0)
    (cursor :background base4)
    (region :foreground unspecified :background base2)
@@ -79,6 +102,14 @@
    (show-paren-match :weight bold)
    (show-paren-mismatch :foreground red :weight bold)
 
+   ;; flymake
+   (flymake-errline :underline (:style wave :color red))
+   (flymake-warnline :underline (:style wave :color orange))
+
+   ;; flyspell
+   (flyspell-duplicate :underline (:style wave :color orange))
+   (flyspell-incorrect :underline (:style wave :color red))
+
    ;; font-lock.el
    (font-lock-builtin-face :foreground base4 :weight bold)
    (font-lock-comment-face :foreground base4)
@@ -93,37 +124,12 @@
    (font-lock-variable-name-face :slant italic)
    (font-lock-warning-face :foreground orange :weight bold)
 
-   ;; compile.el
-   (compilation-mode-line-fail :inherit error :weight bold)
-   (compilation-mode-line-exit :inherit success :weight bold)
+   ;; gdb-mi.el
+   (breakpoint-enabled :foreground red)
+   (breakpoint-enabled :inherit font-lock-comment-face)
 
    ;; linum.el
    (linum :inherit shadow :background base1)
-
-   ;; isearch.el
-   (isearch :background base2)
-   (isearch-fail :inherit error)
-   (lazy-highlight :background base1)
-
-   ;; tooltip.el
-   (tooltip :inherit default :background base0)
-
-   ;; which-func.el
-   (which-func :slant italic)
-
-   ;; eww.el
-   (eww-form-submit :foreground base6 :background base1 :box (:line-width -1))
-   (eww-form-checkbox :inherit eww-form-submit)
-   (eww-form-select :inherit eww-form-submit)
-   (eww-form-text :background base1)
-   (eww-form-textarea :inherit eww-form-text)
-
-   ;; ido.el
-   (ido-only-match :weight bold)
-   (ido-subdir :inherit font-lock-string-face)
-
-   ;; cua-base.el
-   (cua-rectangle :inherit region)
 
    ;; make-mode.el
    (makefile-space :background red)
@@ -134,21 +140,15 @@
    ;; replace.el
    (match :background yellow)
 
-   ;; flymake
-   (flymake-errline :underline (:style wave :color red))
-   (flymake-warnline :underline (:style wave :color orange))
-
-   ;; flyspell
-   (flyspell-duplicate :underline (:style wave :color orange))
-   (flyspell-incorrect :underline (:style wave :color red))
-
    ;; sh-script.el
    (sh-heredoc :inherit font-lock-string-face)
    (sh-quoted-exec :slant italic)
 
-   ;; gdb-mi.el
-   (breakpoint-enabled :foreground red)
-   (breakpoint-enabled :inherit font-lock-comment-face)
+   ;; tooltip.el
+   (tooltip :inherit default :background base0)
+
+   ;; which-func.el
+   (which-func :slant italic)
 
    ))
 
