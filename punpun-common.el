@@ -150,6 +150,18 @@
    ;; which-func.el
    (which-func :slant italic)
 
+   ;; whitespace.el
+   (whitespace-space :foreground unspecified :background base1)
+   (whitespace-hspace :foreground unspecified :background base2)
+   (whitespace-tab :foreground unspecified :background red)
+   (whitespace-newline :inherit font-lock-comment-face)
+   (whitespace-line :inherit warning :underline t)
+   (whitespace-space-before-tab :foreground unspecified :background orange)
+   (whitespace-space-after-tab :foreground unspecified :background orange)
+   (whitespace-indentation :foreground unspecified :background orange)
+   (whitespace-empty :foreground unspecified :background yellow)
+   (whitespace-trailing :foreground unspecified :background red)
+
    ))
 
 (defun punpun-set-faces (theme darkp)
