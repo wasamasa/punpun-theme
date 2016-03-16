@@ -137,6 +137,12 @@
    ;; pulse.el
    (pulse-highlight-start-face :background yellow)
 
+   ;; re-builder.el
+   (reb-match-0 :foreground base7 :background base1)
+   (reb-match-1 :foreground base7 :background base2)
+   (reb-match-2 :foreground base7 :background yellow)
+   (reb-match-3 :foreground base7 :background orange)
+
    ;; replace.el
    (match :background yellow)
 
