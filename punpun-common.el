@@ -134,6 +134,16 @@
    ;; make-mode.el
    (makefile-space :background red)
 
+   ;; outline.el
+   (outline-1 :inherit font-lock-comment-face)
+   (outline-2 :inherit outline-1)
+   (outline-3 :inherit outline-1)
+   (outline-4 :inherit outline-1)
+   (outline-5 :inherit outline-1)
+   (outline-6 :inherit outline-1)
+   (outline-7 :inherit outline-1)
+   (outline-8 :inherit outline-1)
+
    ;; pulse.el
    (pulse-highlight-start-face :background yellow)
 
