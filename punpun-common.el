@@ -144,7 +144,7 @@
    (makefile-space :background red)
 
    ;; outline.el
-   (outline-1 :inherit font-lock-comment-face)
+   (outline-1 :weight bold)
    (outline-2 :inherit outline-1)
    (outline-3 :inherit outline-1)
    (outline-4 :inherit outline-1)
