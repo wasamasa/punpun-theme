@@ -128,6 +128,15 @@
    (breakpoint-enabled :foreground red)
    (breakpoint-enabled :inherit font-lock-comment-face)
 
+   ;; info.el
+   (info-node :weight bold)
+   (info-title-1 :inherit info-node)
+   (info-title-2 :inherit info-node)
+   (info-title-3 :inherit info-node)
+   (info-title-4 :inherit info-node)
+   (info-menu-header :inherit default)
+   (info-menu-star :foreground red)
+
    ;; linum.el
    (linum :inherit shadow :background base1)
 
