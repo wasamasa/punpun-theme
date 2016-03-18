@@ -56,6 +56,9 @@
    ;; cua-base.el
    (cua-rectangle :inherit region)
 
+   ;; dired.el
+   (dired-symlink :foreground blue)
+
    ;; eww.el
    (eww-form-submit :foreground base6 :background base1 :box (:line-width -1))
    (eww-form-checkbox :inherit eww-form-submit)
