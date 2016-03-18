@@ -59,6 +59,22 @@
    ;; dired.el
    (dired-symlink :foreground blue)
 
+   ;; em-ls.el
+   (eshell-ls-directory :inherit dired-directory)
+   (eshell-ls-symlink :inherit dired-symlink)
+   (eshell-ls-executable :foreground green)
+   (eshell-ls-readonly :foreground pink)
+   (eshell-ls-unreadable :foreground cyan)
+   (eshell-ls-special :foreground orange)
+   (eshell-ls-missing :foreground red)
+   (eshell-ls-archive :inherit dired-ignored)
+   (eshell-ls-backup :inherit dired-ignored)
+   (eshell-ls-product :inherit dired-ignored)
+   (eshell-ls-clutter :inherit dired-ignored)
+
+   ;; em-prompt.el
+   (eshell-prompt :weight bold)
+
    ;; eww.el
    (eww-form-submit :foreground base6 :background base1 :box (:line-width -1))
    (eww-form-checkbox :inherit eww-form-submit)
