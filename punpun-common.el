@@ -165,6 +165,14 @@
    ;; replace.el
    (match :background yellow)
 
+   ;; rst.el
+   (rst-level-1 :inherit outline-1)
+   (rst-level-2 :inherit outline-2)
+   (rst-level-3 :inherit outline-3)
+   (rst-level-4 :inherit outline-4)
+   (rst-level-5 :inherit outline-5)
+   (rst-level-6 :inherit outline-6)
+
    ;; sh-script.el
    (sh-heredoc :inherit font-lock-string-face)
    (sh-quoted-exec :slant italic)
