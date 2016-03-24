@@ -148,6 +148,7 @@
    (breakpoint-enabled :inherit font-lock-comment-face)
 
    ;; info.el
+   (Info-quoted :inherit font-lock-constant-face)
    (info-node :weight bold)
    (info-title-1 :inherit info-node)
    (info-title-2 :inherit info-node)
