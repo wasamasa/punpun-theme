@@ -82,28 +82,6 @@
    (eww-form-text :background base1)
    (eww-form-textarea :inherit eww-form-text)
 
-   ;; ido.el
-   (ido-only-match :weight bold)
-   (ido-subdir :inherit font-lock-string-face)
-
-   ;; isearch.el
-   (isearch :background base2)
-   (isearch-fail :inherit error)
-   (lazy-highlight :background base1)
-
-   ;; ivy.el
-   (ivy-confirm-face :foreground green)
-   (ivy-current-match :weight bold :background base1)
-   (ivy-match-required-face :foreground red)
-   (ivy-minibuffer-match-face-1 :foreground orange)
-   (ivy-minibuffer-match-face-2 :foreground orange)
-   (ivy-minibuffer-match-face-3 :foreground orange)
-   (ivy-minibuffer-match-face-4 :foreground orange)
-   (ivy-modified-buffer :inherit default)
-   (ivy-remote :foreground blue)
-   (ivy-subdir :inherit dired-directory)
-   (ivy-virtual :inherit font-lock-builtin-face)
-
    ;; faces.el
    (default :foreground base5 :background base0)
    (cursor :background base4)
@@ -160,6 +138,15 @@
    (breakpoint-enabled :foreground red)
    (breakpoint-enabled :inherit font-lock-comment-face)
 
+   ;; ido.el
+   (ido-only-match :weight bold)
+   (ido-subdir :inherit font-lock-string-face)
+
+   ;; isearch.el
+   (isearch :background base2)
+   (isearch-fail :inherit error)
+   (lazy-highlight :background base1)
+
    ;; info.el
    (Info-quoted :inherit font-lock-constant-face)
    (info-node :weight bold)
@@ -169,6 +156,19 @@
    (info-title-4 :inherit info-node)
    (info-menu-header :inherit default)
    (info-menu-star :foreground red)
+
+   ;; ivy.el
+   (ivy-confirm-face :foreground green)
+   (ivy-current-match :weight bold :background base1)
+   (ivy-match-required-face :foreground red)
+   (ivy-minibuffer-match-face-1 :foreground orange)
+   (ivy-minibuffer-match-face-2 :foreground orange)
+   (ivy-minibuffer-match-face-3 :foreground orange)
+   (ivy-minibuffer-match-face-4 :foreground orange)
+   (ivy-modified-buffer :inherit default)
+   (ivy-remote :foreground blue)
+   (ivy-subdir :inherit dired-directory)
+   (ivy-virtual :inherit font-lock-builtin-face)
 
    ;; linum.el
    (linum :inherit shadow :background base1)
