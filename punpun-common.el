@@ -153,6 +153,10 @@
    (breakpoint-enabled :foreground red)
    (breakpoint-enabled :inherit font-lock-comment-face)
 
+   ;; highlight-indentation.el
+   (highlight-indentation-face :background base1)
+   (highlight-indentation-current-column-face :background base2)
+
    ;; hydra.el
    (hydra-face-red :foreground red :weight bold)
    (hydra-face-blue :foreground blue :weight bold)
