@@ -122,11 +122,16 @@
    (show-paren-match :weight bold)
    (show-paren-mismatch :foreground red :weight bold)
 
-   ;; flymake
+   ;; flycheck.el
+   (flycheck-error :underline (:style wave :color red))
+   (flycheck-warning :underline (:style wave :color orange))
+   (flycheck-info :underline (:style wave :color green))
+
+   ;; flymake.el
    (flymake-errline :underline (:style wave :color red))
    (flymake-warnline :underline (:style wave :color orange))
 
-   ;; flyspell
+   ;; flyspell.el
    (flyspell-duplicate :underline (:style wave :color orange))
    (flyspell-incorrect :underline (:style wave :color red))
 
