@@ -51,6 +51,10 @@
 (defvar punpun-faces
  '(;; faces sorted alphabetically by the file they appear in
 
+   ;; ace-jump-mode.el
+   (ace-jump-face-background :inherit shadow)
+   (ace-jump-face-foreground :foreground red)
+
    ;; compile.el
    (compilation-mode-line-fail :inherit error :weight bold)
    (compilation-mode-line-exit :inherit success :weight bold)
