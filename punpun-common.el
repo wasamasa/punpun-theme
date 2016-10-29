@@ -49,7 +49,9 @@
     (violet ("#8700d7" "#af00d7") ("color-92"  "color-128"))))
 
 (defvar punpun-faces
- '(;; compile.el
+ '(;; faces sorted alphabetically by the file they appear in
+
+   ;; compile.el
    (compilation-mode-line-fail :inherit error :weight bold)
    (compilation-mode-line-exit :inherit success :weight bold)
 
@@ -58,6 +60,10 @@
 
    ;; dired.el
    (dired-symlink :foreground blue)
+
+   ;; enh-ruby-mode.el
+   (erm-syn-errline :box (:line-width 1 :color red))
+   (erm-syn-warnline :box (:line-width 1 :color orange))
 
    ;; em-ls.el
    (eshell-ls-directory :inherit dired-directory)
