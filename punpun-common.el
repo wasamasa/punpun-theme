@@ -157,6 +157,10 @@
    (highlight-indentation-face :background base1)
    (highlight-indentation-current-column-face :background base2)
 
+   ;; highlight-symbol.el
+   (highlight-symbol-face :inherit highlight)
+   ;; TODO: think up a solution for `highlight-symbol-colors'
+
    ;; hydra.el
    (hydra-face-red :foreground red :weight bold)
    (hydra-face-blue :foreground blue :weight bold)
