@@ -153,6 +153,13 @@
    (breakpoint-enabled :foreground red)
    (breakpoint-enabled :inherit font-lock-comment-face)
 
+   ;; hydra.el
+   (hydra-face-red :foreground red :weight bold)
+   (hydra-face-blue :foreground blue :weight bold)
+   (hydra-face-amaranth :foreground violet :weight bold)
+   (hydra-face-pink :foreground pink :weight bold)
+   (hydra-face-teal :foreground cyan :weight bold)
+
    ;; ido.el
    (ido-only-match :weight bold)
    (ido-subdir :inherit font-lock-string-face)
