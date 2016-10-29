@@ -161,6 +161,9 @@
    (highlight-symbol-face :inherit highlight)
    ;; TODO: think up a solution for `highlight-symbol-colors'
 
+   ;; hl-todo.el
+   (hl-todo :foreground red :weight bold)
+
    ;; hydra.el
    (hydra-face-red :foreground red :weight bold)
    (hydra-face-blue :foreground blue :weight bold)
