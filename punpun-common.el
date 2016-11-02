@@ -55,6 +55,13 @@
    (ace-jump-face-background :inherit shadow)
    (ace-jump-face-foreground :foreground red)
 
+   ;; avy.el
+   (avy-lead-face :foreground base1 :background red)
+   (avy-lead-face-0 :foreground base1 :background pink)
+   (avy-lead-face-1 :foreground base1 :background violet)
+   (avy-lead-face-2 :foreground base1 :background blue)
+   (avy-background-face :foreground base4)
+
    ;; compile.el
    (compilation-mode-line-fail :inherit error :weight bold)
    (compilation-mode-line-exit :inherit success :weight bold)
