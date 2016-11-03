@@ -250,6 +250,10 @@
    (sh-heredoc :inherit font-lock-string-face)
    (sh-quoted-exec :slant italic)
 
+   ;; smartparens.el
+   (sp-wrap-overlay-opening-pair :inherit sp-wrap-overlay-face :foreground green)
+   (sp-wrap-overlay-closing-pair :inherit sp-wrap-overlay-face :foreground red)
+
    ;; tooltip.el
    (tooltip :inherit default :background base0)
 
