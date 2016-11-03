@@ -257,6 +257,13 @@
    ;; tooltip.el
    (tooltip :inherit default :background base0)
 
+   ;; undo-tree.el
+   (undo-tree-visualizer-default-face :inherit default)
+   (undo-tree-visualizer-active-branch-face :weight bold)
+   (undo-tree-visualizer-unmodified-face :foreground cyan)
+   (undo-tree-visualizer-current-face :foreground red)
+   (undo-tree-visualizer-register-face :foreground yellow)
+
    ;; which-func.el
    (which-func :slant italic)
 
