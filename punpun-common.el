@@ -216,6 +216,18 @@
    ;; make-mode.el
    (makefile-space :background red)
 
+   ;; message.el
+   (message-header-to :inherit default :weight bold)
+   (message-header-cc :inherit default)
+   (message-header-subject :inherit default :weight bold)
+   (message-header-newsgroups :inherit default :weight bold)
+   (message-header-other :inherit default)
+   (message-header-name :inherit font-lock-variable-name-face)
+   (message-header-xheader :inherit default)
+   (message-separator :inherit font-lock-comment-face)
+   (message-cited-text :inherit font-lock-comment-face)
+   (message-mml :inherit font-lock-comment-face)
+
    ;; outline.el
    (outline-1 :weight bold)
    (outline-2 :inherit outline-1)
